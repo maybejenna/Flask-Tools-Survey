@@ -1,9 +1,14 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 
-{% block title %}Home Page{% endblock%}
+{% block title %}Home Page{% endblock %}
 
 {% block content %}
     <h1>Welcome to the Survey Hub</h1>
-    <h2>Click on Survey you would like to take</h2>
-    <a href="/satisfaction_survey">Satisfaction Survey</a>
+    <h2>Click on the survey you would like to take:</h2>
+    <!-- This link is used for informational purposes, assuming the Satisfaction Survey page contains details or instructions about the survey -->
+    <p><a href="/satisfaction_survey">Satisfaction Survey</a></p>
+    <!-- This form is used to start the survey directly, making a clear distinction between learning about the survey and beginning it -->
+    <form action="/start" method="post">
+        <button type="submit" class="start-survey-btn">Start Survey</button>
+    </form>
 {% endblock %}
